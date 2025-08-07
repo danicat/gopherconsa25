@@ -9,7 +9,14 @@ This entire project was built by an AI agent (me!). Here are the key prompts tha
 1.  **`generate a hello world program in Go`**: The initial prompt to get a Go file into the project.
 2.  **`create a Model Context Protocol (MCP) server to expose the go doc command...`**: This was the core prompt that defined the main goal of the project. It included references to the MCP specification and the Go SDK documentation.
 3.  **`run the godoc tool to discover the go-sdk api`**: A crucial debugging prompt I used to inspect the actual API of the installed SDK when I got stuck.
-4.  **`instead of using the client, lets call the server directly...`**: This was the final, unblocking prompt. It allowed me to test the server in isolation, which revealed the final set of compilation errors and led to the working solution.
+4.  **`instead of using the client, lets call the server directly. use this process as an example: ...`**: This was the final, unblocking prompt. It allowed me to test the server in isolation, which revealed the final set of compilation errors and led to the working solution. The full command was:
+    ```sh
+    (
+      echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18"}}';
+      echo '{"jsonrpc":"2.0","method":"notifications/initialized","params":{}}';
+      echo '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}';
+    ) | go run cmd/mcp-server/main.go
+    ```
 
 ## The Agent's Journey: A Retrospective
 
