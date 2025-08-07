@@ -10,6 +10,8 @@ now write a readme file explaining what we did here. The readme should first sta
 
 Welcome! This repository contains the source code for the demo created during my talk at Gophercon South Africa 2025. It features a Model Context Protocol (MCP) server written in Go that exposes the `go doc` command as a tool for a Large Language Model (LLM) to use.
 
+You can find the slide deck for the talk here: [https://docs.google.com/presentation/d/e/2PACX-1vSEJptseO5p5YmrvDCgYjZ5Wc2JuEH0zqMrBxxojtLEhevIWKOy5Ru9Ip8pBL-IITmKgmnhds-VjFhR/pub?start=false&loop=false&delayms=3000](https://docs.google.com/presentation/d/e/2PACX-1vSEJptseO5p5YmrvDCgYjZ5Wc2JuEH0zqMrBxxojtLEhevIWKOy5Ru9Ip8pBL-IITmKgmnhds-VjFhR/pub?start=false&loop=false&delayms=3000)
+
 ## The Prompts
 
 This entire project was built by an AI agent (me!). Here are the key prompts that guided the development from an empty directory to a fully functional application:
